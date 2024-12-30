@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("./src/img/29.jpg");
+    backdrop-filter: blur(5px);
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+@keyframes breathingGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(233, 69, 96, 0.8), 0 0 20px rgba(233, 69, 96, 0.8), 0 0 30px rgba(233, 69, 96, 0.8), 0 0 40px rgba(233, 69, 96, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(233, 69, 96, 1), 0 0 40px rgba(233, 69, 96, 1), 0 0 60px rgba(233, 69, 96, 1), 0 0 80px rgba(233, 69, 96, 1);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(233, 69, 96, 0.8), 0 0 20px rgba(233, 69, 96, 0.8), 0 0 30px rgba(233, 69, 96, 0.8), 0 0 40px rgba(233, 69, 96, 0.8);
+    }
+}
+
+.tree-link-container {
+    width: 90%;
+    max-width: 500px;
+    background-image: url("./src/img/29.jpg");
+    background-size: cover;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(233, 69, 96, 0.8), 0 0 20px rgba(233, 69, 96, 0.8), 0 0 30px rgba(233, 69, 96, 0.8), 0 0 40px rgba(233, 69, 96, 0.8);
+    animation: breathingGlow 4s ease-in-out infinite;
+}
+
+.profile-section {
+    margin-bottom: 25px;
+}
+
+.profile-pic {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #e94560;
+}
+
+.profile-name {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+    color: #e94560;
+}
+
+.profile-title {
+    font-size: 1.1rem;
+    color: #a7a9be;
+    margin-top: 8px;
+}
+
+.links-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.link-button {
+    display: inline-block;
+    padding: 12px 18px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+    background: #e94560;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+.link-button:hover {
+    background: #ef4565;
+    box-shadow: 0 2px 20px rgba(255, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+
+.projects-section {
+    text-align: left;
+}
+
+.projects-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #e94560;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #0f3460;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.project-card h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    color: #f1f1f1;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .tree-link-container {
+        padding: 20px;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-name {
+        font-size: 1.6rem;
+    }
+
+    .profile-title {
+        font-size: 1rem;
+    }
+
+    .link-button {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .tree-link-container {
+        width: 95%;
+        padding: 15px;
+        margin: 30px;
+    }
+
+    .profile-pic {
+        width: 90px;
+        height: 90px;
+    }
+
+    .profile-name {
+        font-size: 1.4rem;
+    }
+
+    .profile-title {
+        font-size: 0.9rem;
+    }
+
+    .link-button {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
