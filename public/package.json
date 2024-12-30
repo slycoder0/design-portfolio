@@ -1,0 +1,10 @@
+{
+  "name": "design-portfolio",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "echo 'No build step required'"
+  },
+  "dependencies": {
+    "vercel": "^39.2.0"
+  }
+}
